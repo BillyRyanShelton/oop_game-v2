@@ -10,7 +10,7 @@
 	 	}	
 	
 	/**
-	* Creates phrases for use in game
+	* Creates 80s phrases for use in game
 	* @return {array} An array of phrases that could be used in the game
 	*/
 	createPhrases(){
@@ -18,7 +18,7 @@
 						new Phrase('The Fall Guy'), new Phrase('Sulaco'), new Phrase('Delorean'), new Phrase('Maverick'),
 						new Phrase('Spanish Peacock'), new Phrase('Apple II'), new Phrase('Bohemian Rhapsody'), new Phrase('Cowabunga'),
 						new Phrase('Take On Me'), new Phrase('Dragon ball'), new Phrase('Spielberg'), new Phrase('Rubik'),
-						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam')
+						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam'), new Phrase('King of Pop')
 		]; return this.phrases;
 	}
 
