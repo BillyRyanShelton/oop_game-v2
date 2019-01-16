@@ -1,8 +1,8 @@
 /* Main styles */
-/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');*/
-<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+/*<style>
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-</style>
+</style>*/
 
 /* Variables */
 
@@ -23,8 +23,8 @@
 
 * {
   box-sizing: border-box;
-  /*font-family: 'Montserrat', sans-serif;*/
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Press Start 2P', cursive;*/
 }
 
 body {
@@ -103,7 +103,7 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
-  background: var(--color-neutral-light);
+  background: var(--color-neutral-light);*/
   border-radius: 5px;
 }
 

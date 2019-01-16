@@ -24,4 +24,22 @@
  		} document.getElementById('phrase').innerHTML = phraseHTML;
 
  	}
+
+ 	//returns true or false if the letter is in the phrase
+ 	checkLetter(letter) {
+ 		for(let i = 0; i < this.phrase.length; i++) {
+ 			if(letter === this.phrase[i]) {
+ 				return true;
+ 			} 
+ 		} return false;
+ 	}
+
+ 	//shows the matched letter on the DOM
+ 	showMatchedLetter(letter) {
+ 		let letterClass = 'hide letter ' + letter;
+ 		let numLetters = document.getElementsByClassName(letterClass);
+ 		for(let i = 0; i < numLetters.length; i++) {
+ 			document.getElementsByClassName(letterClass)[i].className = 'show';
+ 		}
+ 	};
  };
