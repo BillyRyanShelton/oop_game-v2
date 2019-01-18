@@ -1,5 +1,5 @@
 /* Main styles */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');*/
 /*<style>
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 </style>*/
@@ -23,8 +23,8 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  /*font-family: 'Press Start 2P', cursive;*/
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Press Start 2P', cursive;
 }
 
 body {
@@ -76,11 +76,14 @@ button {
   height: 100%;
   max-height: 900px;
   text-align: center;
+  /*main background - black*/
+  background-color:#000
 }
 
 .section {
   width: 100%;
   padding: 10px;
+  
 }
 
 #phrase ul li{
@@ -90,7 +93,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #07ef00/*#3a3f58*/;
 }
 
 
@@ -180,11 +183,11 @@ button {
 }
 
 .title {
-  color: #FFF;
+  color: #07ef00/*#FFF*/;
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #000/*#3a3f58*/;
 }
 
 .start a {
