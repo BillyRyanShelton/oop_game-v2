@@ -1,6 +1,6 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Phrase.js */
+// Author:	Billy R. Shelton
+// Date: 1/17/2019
+// Description:  This is a header and implementation file for the phrase class.
 
  class Phrase {
  	constructor(phrase) {
@@ -28,7 +28,7 @@
  	//returns true or false if the letter is in the phrase
  	checkLetter(letter) {
  		for(let i = 0; i < this.phrase.length; i++) {
- 			if(letter === this.phrase[i]) {
+ 			if(letter === this.phrase[i].toLowerCase()) {
  				return true;
  			} 
  		} return false;

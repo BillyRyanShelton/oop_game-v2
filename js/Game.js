@@ -1,6 +1,6 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Game.js */
+// Author:	Billy R. Shelton
+// Date: 1/17/2019
+// Description:  This is a header and implementation file for the Game class.
 
  class Game {
  	constructor(){
@@ -45,34 +45,56 @@
 		this.activePhrase.addPhraseToDisplay();
 	};
 
-	handleInteraction() {
+	//function that handles the logic behind when a button is pressed on screen
+	handleInteraction(button) {
+		//if the button is pressed it is disabled from being pressed again
+		button.disabled = true;
+
+		//if the button is match to a letter in the phrase its class is changed to chosen and the letter is shown in the phrase
+		if(this.activePhrase.checkLetter(button.innerText)) {
+			button.className = 'chosen';
+			this.activePhrase.showMatchedLetter(button.innerText);
+			if(this.checkForWin()) {
+				this.gameOver();
+			}
+		} //if the button pressed is an incorrect match its class is changed to wrong and a life is removed
+		else {
+			button.className = 'wrong';
+			this.removeLife();
+		}
 
 	};
 
 	//returns true or false is user has won the game
 	checkForWin() {
-		for(let i = 0; i < this.activePhrase; i++) {
-			let letterClass = 'hide letter ' + this.activePhrase[i];
- 			if(document.getElementsByClassName(letterClass).style.visibility === 'hidden') {
- 				return false;
- 			} 
- 		} return true;
+		let hiddenClass = 'hide';
+ 		let numHidden = document.getElementsByClassName(hiddenClass).length;
+ 		if(numHidden === 0) {
+ 			return true;
+ 		} else { return false; }
 	};
 
 	//removes a life and increments the missed property
 	removeLife() {
-		//a live heart is replaced with a lost heart
-		let ol = document.getElementsByClassName('section').getElementsByTagName('ol');
-		for(let i = 0; i < ol.length; i++) {
-			if(ol[i].src === "images/liveHeart.png") {
-				ol[i].src = "images/lostHeart.png";
-				this.missed++;
-			}
-		}
-
+		//the number of missed is updated
+		this.missed++;
 		//if the user has lost 5 hearts the end game function is called
 		if(this.missed === 5) {
 			this.gameOver();
+		}
+
+		//a live heart is replaced with a lost heart
+		let hearts = document.getElementsByClassName('tries');
+		let numLives = document.getElementsByClassName('tries').length;
+		let lostHeart = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
+		let liveHeart = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">';
+		for(let i = 0; i < numLives; i++) {
+			if(hearts[i].innerHTML === '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">')
+			{
+				hearts[i].innerHTML = lostHeart;
+				return;
+			}
+
 		}
 	};
 
@@ -80,19 +102,45 @@
 		//the start screen overlay is made visible
 		document.getElementById('overlay').style.visibility = 'visible';
 
-		//the start button is hidden from view
-		document.getElementsById("btn__reset").style.visibility = 'hidden';
+		// //the start button is hidden from view
+		// document.getElementById("btn__reset").style.visibility = 'hidden';
 
 		//if the user loses a game over message is displayed
 		if(this.missed === 5) {
-			let gameOVer = 'Game Over Man, Game Over!';
+			let gameOver = 'Game Over Man, Game Over!';
  			document.getElementById("game-over-message").innerText = gameOver;
  			document.getElementsByClassName("start").className = 'win';
 		} //if the user wins a win message is dispalyed
 		else {
-			let gameOVer = 'You Win!';
+			let gameOver = 'You Win!';
  			document.getElementById("game-over-message").innerText = gameOver;
  			document.getElementsByClassName("start").className = 'lose';
 		}
 	};
+
+	//this function resets the game so the user can play a new game
+	resetGame() {
+		//the phrase is removed
+		document.getElementById('phrase').getElementsByTagName('ul')[0].innerHTML = '';
+		
+		//let numKeys = document.getElementsByClassName('key').length;
+		//all the key classes are reset to 'key'
+		for(let i = 0; i < 4; i++) {
+			let key = document.getElementsByClassName('keyrow')[i];
+			for(let j = 0; j < key.children.length; j++) {
+				key.children[j].className = 'key';
+			}
+		}
+
+		//all the hearts are restored
+		let hearts = document.getElementsByClassName('tries');
+		let liveHeart = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">';
+		for(let i = 0; i < 5; i++) {
+			if(hearts[i].innerHTML != '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">')
+			{
+				hearts[i].innerHTML = liveHeart;
+			}
+
+		}
+	}
 };

@@ -206,3 +206,10 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
+#phrase ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
