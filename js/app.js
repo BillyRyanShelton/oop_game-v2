@@ -11,7 +11,7 @@ let game;
 let startButton = document.getElementById('btn__reset');
 startButton.addEventListener('click',(e) => {
 
-	//if the game over message is not empty then a game has already been displayed and the previous game must be reset
+	//if the game over message is not empty then a game has already been played and the previous game must be reset
 	if(document.getElementById("game-over-message").innerText != '') {
 		game.resetGame();
 	}
@@ -19,6 +19,7 @@ startButton.addEventListener('click',(e) => {
 	game = new Game();
 	game.startGame();
 });
+
 
 //event listeners are created for each button on screen
 for(let i = 0; i < 36; i++) {
@@ -29,3 +30,15 @@ for(let i = 0; i < 36; i++) {
 		game.handleInteraction(e.target);
 	});
 }
+
+
+
+//the handle interaction function is called when a physical key is pressed
+document.addEventListener('keypress', (e)=> {
+	for(let i = 0; i < 36; i++) {
+		let letter = document.getElementsByClassName('key')[i];
+		if(e.key === letter.innerText) {
+			game.handleInteraction(letter);
+		}
+	}
+});
