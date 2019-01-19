@@ -10,7 +10,7 @@ let game;
 //starts the game when the start button is pressed
 let startButton = document.getElementById('btn__reset');
 startButton.addEventListener('click',(e) => {
-	
+
 	//if the game over message is not empty then a game has already been displayed and the previous game must be reset
 	if(document.getElementById("game-over-message").innerText != '') {
 		game.resetGame();

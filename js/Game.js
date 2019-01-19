@@ -7,6 +7,7 @@
 	 	this.missed = 0;
 	 	this.phrases = [];
 	 	this.activePhrase = null;
+	 	this.currentPhraseIndex = null;
 	 	}	
 	
 	/**
@@ -18,8 +19,8 @@
 						new Phrase('The Fall Guy'), new Phrase('Sulaco'), new Phrase('Delorean'), new Phrase('Maverick'),
 						new Phrase('Spanish Peacock'), new Phrase('Apple II'), new Phrase('Bohemian Rhapsody'), new Phrase('Cowabunga'),
 						new Phrase('Take On Me'), new Phrase('Dragon ball'), new Phrase('Spielberg'), new Phrase('Rubik'),
-						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam'), new Phrase('King of Pop')
-		]; return this.phrases;
+						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam'), new Phrase('King of Pop'), 
+						new Phrase('Pretty In Pink')]
 	}
 
 	/**
@@ -52,6 +53,8 @@
 
 		//if the button is match to a letter in the phrase its class is changed to chosen and the letter is shown in the phrase
 		if(this.activePhrase.checkLetter(button.innerText)) {
+			let correctSound = document.getElementsByTagName('audio')[0];
+			correctSound.play();
 			button.className = 'chosen';
 			this.activePhrase.showMatchedLetter(button.innerText);
 			if(this.checkForWin()) {
@@ -59,6 +62,8 @@
 			}
 		} //if the button pressed is an incorrect match its class is changed to wrong and a life is removed
 		else {
+			let incorrectSound = document.getElementsByTagName('audio')[1];
+			incorrectSound.play();
 			button.className = 'wrong';
 			this.removeLife();
 		}
@@ -112,6 +117,8 @@
  			document.getElementsByClassName("start").className = 'win';
 		} //if the user wins a win message is dispalyed
 		else {
+			let cheer = document.getElementsByTagName('audio')[2];
+			cheer.play();
 			let gameOver = 'You Win!';
  			document.getElementById("game-over-message").innerText = gameOver;
  			document.getElementsByClassName("start").className = 'lose';
@@ -123,12 +130,13 @@
 		//the phrase is removed
 		document.getElementById('phrase').getElementsByTagName('ul')[0].innerHTML = '';
 		
-		//let numKeys = document.getElementsByClassName('key').length;
-		//all the key classes are reset to 'key'
+		
+		//all the key classes are reset to 'key' and all the keys are undisabled from being pressed
 		for(let i = 0; i < 4; i++) {
 			let key = document.getElementsByClassName('keyrow')[i];
 			for(let j = 0; j < key.children.length; j++) {
 				key.children[j].className = 'key';
+				key.children[j].disabled = false;
 			}
 		}
 
@@ -142,5 +150,7 @@
 			}
 
 		}
+
+
 	}
 };
