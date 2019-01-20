@@ -13,8 +13,8 @@
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
-  --font-size-large: 60px;
-  --font-size-medium: 20px;
+  --font-size-large: 35px;/*60px;*/
+  --font-size-medium: 11px;/*20px;*/
   --transition: all .2s ease-in-out;
 }
 
@@ -47,7 +47,7 @@ h2 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 17px;
 }
 
 button {
@@ -75,6 +75,7 @@ button {
   justify-content: space-around;
   height: 100%;
   max-height: 900px;
+  max-width: 1500px;
   text-align: center;
   /*main background - black*/
   background-color:#000
@@ -101,13 +102,13 @@ button {
 
 .letter {
   font-size: var(--font-size-medium);
-  height: 65px;
-  width: 65px;
-  padding: 20px 1px 0 1px;
+  height: 40px;/*65px;*/
+  width: 40px;/*65px;*/
+  padding: 14px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);*/
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .space {
@@ -120,11 +121,11 @@ button {
   color: #fff;
   background-color: #4ac0d5;
   font-size: 20px;
-  height: 65px;
-  width: 65px;
-  padding: 20px 1px 0 1px;
+  height: 40px;/*65px;*/
+  width: 40px;/*65px;*/
+  padding: 5px/*20px*/ 1px 3px 1px;
   margin-right: 2px;
-  border-radius: 5px;
+  border-radius: 1px;/*5px;*/
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
 }
