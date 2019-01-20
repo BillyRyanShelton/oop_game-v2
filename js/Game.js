@@ -20,7 +20,7 @@
 						new Phrase('Spanish Peacock'), new Phrase('Apple II'), new Phrase('Bohemian Rhapsody'), new Phrase('Cowabunga'),
 						new Phrase('Take On Me'), new Phrase('Dragon ball'), new Phrase('Spielberg'), new Phrase('Rubik'),
 						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam'), new Phrase('King of Pop'), 
-						new Phrase('Pretty In Pink')]
+						new Phrase('Pretty In Pink'), new Phrase('Han Solo'), new Phrase('Indiana Jones'), new Phrase('Darth Vader')]
 	}
 
 	/**
