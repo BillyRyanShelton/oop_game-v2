@@ -215,6 +215,13 @@ button {
   color: var(--color-lose);
 }
 
+@media (max-width:768px){
+  .keyrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
 #phrase ul li {
   -webkit-user-select: none;
      -moz-user-select: none;
