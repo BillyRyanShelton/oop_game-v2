@@ -64,16 +64,18 @@ button {
   cursor: pointer;
 }
 
+.logo{
+	float: left;
+	width:82px; 
+	height:82px; 
+	border:1px;
+}
+
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
 }
 
-img{
-	width:82px; 
-	height:82px; 
-	border:1px;
-}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -234,9 +236,9 @@ img{
     flex-wrap: wrap;
   }
 
-  img{
-  	display: flex;
-  }
+  /*img{
+  	position: relative;
+  }*/
 }
 
 #phrase ul li {
