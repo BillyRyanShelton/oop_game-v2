@@ -73,7 +73,6 @@ img{
 	width:82px; 
 	height:82px; 
 	border:1px;
-	display: flex;
 }
 .main-container {
   display: flex;
@@ -233,6 +232,10 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  img{
+  	display: flex;
   }
 }
 
