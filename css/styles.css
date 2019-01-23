@@ -248,7 +248,7 @@ button {
   }
   .logo{
   	display:block;
-  	top-margin: 100px;
+  	padding-top: 100px;
   }
 
 }
