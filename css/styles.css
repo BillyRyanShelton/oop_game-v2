@@ -68,7 +68,7 @@ button {
 	float: left;
 	width:82px; 
 	height:82px; 
-	border:1px;
+	padding-bottom: 5px;
 }
 
 #btn__reset {
