@@ -248,8 +248,10 @@ button {
   }
   .logo{
   	display:block;
-  	padding:200px;
   }
+  head{
+	margin-top: 20px;
+}
 
 }
 #phrase ul li {
