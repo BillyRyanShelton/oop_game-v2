@@ -238,13 +238,17 @@ button {
   .banner {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
   }
   .overlay {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
   }
+  .logo{
+  	display:flex;
+  }
+
 }
 #phrase ul li {
   -webkit-user-select: none;
