@@ -70,6 +70,7 @@ button {
 	padding-bottom: 5px;
 	position: relative;
 	margin: 1px;
+	top-margin: 3px;
 }
 
 #btn__reset {
