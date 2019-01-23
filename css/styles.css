@@ -65,10 +65,10 @@ button {
 }
 
 .logo{
-	float: left;
 	width:82px; 
 	height:82px; 
 	padding-bottom: 5px;
+	position: relative;
 }
 
 #btn__reset {
@@ -235,12 +235,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  /*img{
-  	position: relative;
-  }*/
 }
-
 #phrase ul li {
   -webkit-user-select: none;
      -moz-user-select: none;
