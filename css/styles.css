@@ -69,6 +69,7 @@ button {
 	height:82px; 
 	padding-bottom: 5px;
 	position: relative;
+	margin: 1px;
 }
 
 #btn__reset {
