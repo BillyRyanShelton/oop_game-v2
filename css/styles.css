@@ -73,6 +73,7 @@ img{
 	width:82px; 
 	height:82px; 
 	border:1px;
+	display: flex;
 }
 .main-container {
   display: flex;
