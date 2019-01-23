@@ -70,7 +70,6 @@ button {
 	padding-bottom: 5px;
 	position: relative;
 	margin: 1px;
-	top-margin: 3px;
 }
 
 #btn__reset {
@@ -249,6 +248,7 @@ button {
   }
   .logo{
   	display:block;
+  	top-margin: 15px;
   }
 
 }
