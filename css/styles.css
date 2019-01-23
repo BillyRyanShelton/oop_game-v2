@@ -74,8 +74,8 @@ button {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  max-height: 900px;
-  max-width: 1500px;
+  max-height: 1920px;
+  max-width: 1080px;
   text-align: center;
   /*main background - black*/
   background-color:#000
@@ -128,6 +128,7 @@ button {
   border-radius: 1px;/*5px;*/
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
+  margin-top:0px;
 }
 
 
@@ -191,6 +192,12 @@ button {
   color: #07ef00/*#FFF*/;
 }
 
+.hint {
+  color: #CCCC00;
+  top-margin: 1px;
+  margin-bottom: 0px;
+}
+
 .start {
   background-color: #000/*#3a3f58*/;
 }
@@ -215,12 +222,13 @@ button {
   color: var(--color-lose);
 }
 
-@media (max-width:768px){
+@media (max-width:1079px){
   .keyrow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
 
 #phrase ul li {
   -webkit-user-select: none;

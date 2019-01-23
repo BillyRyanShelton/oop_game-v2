@@ -8,6 +8,8 @@
 	 	this.phrases = [];
 	 	this.activePhrase = null;
 	 	this.currentPhraseIndex = null;
+	 	this.ActiveHint = null;
+	 	this.hints = [];
 	 	}	
 	
 	/**
@@ -28,7 +30,8 @@
 	* @return {Object} Phrase object chosen to be used
 	*/
 	getRandomPhrase() {
-		return this.phrases[Math.floor(Math.random() * this.phrases.length)];
+		this.currentPhraseIndex = Math.floor(Math.random() * this.phrases.length);
+		return this.phrases[this.currentPhraseIndex];
 	};
 
 	/**
@@ -44,6 +47,10 @@
 		//a random phrase is added to the display
 		this.activePhrase = this.getRandomPhrase();
 		this.activePhrase.addPhraseToDisplay();
+
+
+		//a hint is added to the display
+		this.displayHint();
 	};
 
 	//function that handles the logic behind when a button is pressed on screen
@@ -130,6 +137,8 @@
 		//the phrase is removed
 		document.getElementById('phrase').getElementsByTagName('ul')[0].innerHTML = '';
 		
+		//the hint is removed
+		document.getElementsByClassName('hint').innerHTML = '';
 		
 		//all the key classes are reset to 'key' and all the keys are undisabled from being pressed
 		for(let i = 0; i < 4; i++) {
@@ -150,7 +159,18 @@
 			}
 
 		}
+	}
 
+	//appends a hint to the game for the user to help solve the phrase
+	displayHint() {
+		this.hints = ['cyberpunk movie', 'green reptiles', 'waka waka waka','street figher',
+						'tv show','alien ship','time travel', 'jet fighter',
+						'highlander', 'computer', 'mercury', 'turtles',
+						'song', 'anime', 'director', 'toy maker',
+						'china town', 'anime cyberpunk', 'mechs', 'mj', 
+						'romantic comedy', 'kessel run', 'doctor', 'sith']
 
+		this.activeHint = this.hints[this.currentPhraseIndex];
+		document.getElementsByClassName('hint')[0].innerText = 'Hint: ' + this.activeHint;
 	}
 };
