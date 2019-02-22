@@ -30,7 +30,7 @@
 	* @return {Object} Phrase object chosen to be used
 	*/
 	getRandomPhrase() {
-		this.currentPhraseIndex = Math.floor(Math.random() * this.phrases.length);
+		this.currentPhraseIndex = Math.floor(Math.random() * (this.phrases.length+1));
 		return this.phrases[this.currentPhraseIndex];
 	};
 
