@@ -22,7 +22,7 @@
 						new Phrase('Spanish Peacock'), new Phrase('Apple II'), new Phrase('Bohemian Rhapsody'), new Phrase('Cowabunga'),
 						new Phrase('Take On Me'), new Phrase('Dragon ball'), new Phrase('Spielberg'), new Phrase('Rubik'),
 						new Phrase('Pork Chop Express'), new Phrase('Akira'), new Phrase('Gundam'), new Phrase('King of Pop'), 
-						new Phrase('Pretty In Pink'), new Phrase('Han Solo'), new Phrase('Indiana Jones'), new Phrase('Darth Vader')]
+						new Phrase('Pretty In Pink'), new Phrase('Han Solo'), new Phrase('Indiana Jones'), new Phrase('Darth Vader'), new Phrase('16 Candles')]
 	}
 
 	/**
@@ -168,7 +168,7 @@
 						'highlander', 'computer', 'mercury', 'turtles',
 						'song', 'anime', 'director', 'toy maker',
 						'china town', 'anime cyberpunk', 'mechs', 'mj', 
-						'romantic comedy', 'kessel run', 'doctor', 'sith']
+						'romantic comedy', 'kessel run', 'doctor', 'sith', 'jake ryan']
 
 		this.activeHint = this.hints[this.currentPhraseIndex];
 		document.getElementsByClassName('hint')[0].innerText = 'Hint: ' + this.activeHint;
